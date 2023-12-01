@@ -9,7 +9,7 @@ resource "aws_vpc" "main" {
 }
 
 resource "aws_subnet" "sub" {
-for_each   = { for subnet in var.vpc_configs.subnets : subnet.name => subnet }
+  for_each   = { for subnet in var.vpc_configs.subnets : subnet.name => subnet }
   vpc_id     = aws_vpc.main.id
   cidr_block = each.value.sub_cidr
 
@@ -22,7 +22,7 @@ resource "aws_internet_gateway" "gateway" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "internet-${var.vpc_configs.name}"
+    Name = "ig-${var.vpc_configs.name}"
   }
 }
 
@@ -35,12 +35,12 @@ resource "aws_route_table" "route" {
   }
 
   tags = {
-    Name = "route-${var.vpc_configs.name}"
+    Name = "rt-${var.vpc_configs.name}"
   }
 }
 
 resource "aws_route_table_association" "rta" {
-  for_each   = { for subnet in var.vpc_configs.subnets : subnet.name => subnet }
+  for_each       = { for subnet in var.vpc_configs.subnets : subnet.name => subnet }
   subnet_id      = aws_subnet.sub[each.value.name].id
   route_table_id = aws_route_table.route.id
 }

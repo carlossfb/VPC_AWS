@@ -5,10 +5,10 @@ variable "location" {
 
 variable "vpc_configs" {
   type = object({
-    name   = string
-    cidr   = string
+    name = string
+    cidr = string
     subnets = list(object({
-      name = string
+      name     = string
       sub_cidr = string
     }))
   })
