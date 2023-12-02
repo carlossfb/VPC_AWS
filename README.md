@@ -29,7 +29,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_location"></a> [location](#input\_location) | Region default | `string` | n/a | yes |
 | <a name="input_route_config"></a> [route\_config](#input\_route\_config) | Route table | `string` | n/a | yes |
 | <a name="input_sg_egress_rules"></a> [sg\_egress\_rules](#input\_sg\_egress\_rules) | Security group egress rule | <pre>list(object({<br>    rule_name        = string<br>    from_port        = number<br>    to_port          = number<br>    protocol         = string<br>    cidr_blocks      = list(string)<br>    ipv6_cidr_blocks = list(string)<br>  }))</pre> | n/a | yes |
 | <a name="input_sg_ingress_rules"></a> [sg\_ingress\_rules](#input\_sg\_ingress\_rules) | Security group ingress rule | <pre>list(object({<br>    rule_name   = string<br>    from_port   = number<br>    to_port     = number<br>    protocol    = string<br>    cidr_blocks = list(string)<br>  }))</pre> | n/a | yes |
