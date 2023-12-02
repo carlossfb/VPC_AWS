@@ -17,7 +17,6 @@ vpc_configs = {
   ]
 }
 
-location = "eu-central-1"
 
 route_config = "0.0.0.0/0"
 
