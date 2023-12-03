@@ -51,4 +51,5 @@ jobs:
         uses: Pluralith/actions/comment@v1.4.0
         with:
           terraform-path: "${{ env.working-directory }}"
+          behavior: "new"
           
