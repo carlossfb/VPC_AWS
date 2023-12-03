@@ -1,7 +1,3 @@
-variable "location" {
-  type        = string
-  description = "Region default"
-}
 
 variable "vpc_configs" {
   type = object({
