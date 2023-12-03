@@ -3,7 +3,7 @@ jobs:
   pluralith:
     runs-on: ubuntu-latest
     env:
-      working-directory: VPC_AWS
+      working-directory: .
 
     name: Run Pluralith
     steps:
