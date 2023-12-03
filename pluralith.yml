@@ -1,3 +1,0 @@
-org_id: "${{ secrets.PLURALITH_ORG_ID }}" # REQUIRED - ID of an existing Pluralith organization. Can be found in your dashboard.
-project_id: "${{ secrets.PLURALITH_PROJECT_ID }}" # REQUIRED - ID for your project. If no project exists with given ID, a new one is created. Otherwise runs get pushed to existing project. (Can only contain lowercase letters, numbers and dashes (-)).
-project_name: "${{ secrets.PLURALITH_PROJECT_NAME }}" # REQUIRED - Name for your project. Will be used to create a new project if no project with previously specified ID exists yet.
